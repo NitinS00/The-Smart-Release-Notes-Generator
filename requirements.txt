@@ -1,0 +1,4 @@
+fastmcp
+gitpython
+jira
+python-dotenv
