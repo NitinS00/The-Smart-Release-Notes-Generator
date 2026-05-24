@@ -173,14 +173,13 @@ def generate_release_report(from_ref: str, to_ref: str = "HEAD") -> str:
     report_lines = [
         f"### Smart Release Audit ({from_ref} ➔ {to_ref})",
         f"Matched **{len(issues)}** Jira tickets across **{len(commits)}** commits.\n",
-        "| Ticket ID | Summary | Current Status | Deploy Ready? |",
-        "| :--- | :--- | :--- | :--- |",
+    
     ]
 
     for issue in issues:
         status_name = issue.fields.status.name
         category = getattr(issue.fields.status.statusCategory, "key", "")
-        is_ready = "✅ Yes" if category.lower() == "done" else "⚠️ Blocked/Open"
+        is_ready = "Yes" if category.lower() == "done" else "Blocked/Open"
         ticket_link = (
             f"[{issue.key}]({jira_url}/browse/{issue.key})"
             if jira_url
