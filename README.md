@@ -8,13 +8,13 @@ A Python-based intelligent release notes generator that bridges Git commits and 
  
 
 FEATURES ::-
-✅ Fetch recent Git commits from a local repository
-✅ Extract Jira ticket IDs automatically from commit messages
-✅ Fetch Jira issue details using Jira REST API
-✅ Generate professional release notes automatically
-✅ Categorize commits and tickets
-✅ Export clean Markdown release summaries
-✅ Easy to integrate into CI/CD pipelines
+ Fetch recent Git commits from a local repository
+ Extract Jira ticket IDs automatically from commit messages
+ Fetch Jira issue details using Jira REST API
+ Generate professional release notes automatically
+ Categorize commits and tickets
+ Export clean Markdown release summaries
+ Easy to integrate into CI/CD pipelines
 
 TECH STACK ::-
 Python 3.x,
