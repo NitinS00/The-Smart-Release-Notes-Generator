@@ -1,25 +1,32 @@
-THE SMART RELEASE NOTES GENERATOR
-A Python-based intelligent release notes generator that bridges Git commits and Jira tickets to automatically create structured release summaries for software projects.
- This project helps developers and teams quickly understand:
- What changes went into a release
- Which Jira tickets were included
- Whether tickets are completed or still open
- Commit summaries grouped in a readable format
- 
+ The Smart Release Notes Generator (MCP Server)
 
-FEATURES ::-
- Fetch recent Git commits from a local repository
- Extract Jira ticket IDs automatically from commit messages
- Fetch Jira issue details using Jira REST API
- Generate professional release notes automatically
- Categorize commits and tickets
- Export clean Markdown release summaries
- Easy to integrate into CI/CD pipelines
+An AI-native **Model Context Protocol (MCP)** server built with Python and `FastMCP`. This tool allows LLMs (like Claude Desktop) to securely interact with your local Git repositories and your Jira instance to track development updates, cross-reference tickets, and automatically generate professional release notes.
 
-TECH STACK ::-
-Python 3.x,
-GitPython,
-Requests,
-Jira REST API,
-Markdown Generation.
+---
+
+ Features
+
+- Model Context Protocol (MCP) Integration: Exposes local tools seamlessly to Claude Desktop or any MCP-compatible AI client.
+- Git History Parsing: Interacts with local repositories using `GitPython` to read and evaluate recent commit logs.
+- Jira Integration: Uses the official `jira` Python SDK to pull task descriptions, statuses, and cross-reference them with your code updates.
+- Environment Driven: Completely configured via standard environment variables and local JSON configurations.
+
+---
+
+ Tech Stack
+
+- Language: Python 3.10+
+- Framework: FastMCP (Model Context Protocol SDK)
+- APIs & SDKs: GitPython, Jira SDK
+- Configuration: Python-dotenv, JSON
+
+---
+
+ Project Structure
+
+```text
+├── .env                         # Local environment configurations (DO NOT COMMIT)
+├── claude_desktop_config.json   # Configuration mapping for Claude Desktop app
+├── requirements.txt             # Python project dependencies
+└── server.py                    # Main FastMCP Server implementation
 
